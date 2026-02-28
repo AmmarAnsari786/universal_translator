@@ -62,7 +62,7 @@ def run_translation_pipeline(job_id: str):
             output_file_path=output_path,
         )
 
-    except Exception as e:
+    except Exception:
         error_msg = traceback.format_exc()
         update_job(db, job_id, status=JobStatus.FAILED, error_log=str(error_msg))
     finally:
