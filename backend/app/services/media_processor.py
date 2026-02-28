@@ -34,7 +34,7 @@ def merge_audio_video(video_path: str, new_audio_path: str, output_path: str) ->
     return output_path
 
 
-def convert_audio(audio_path: str, output_path: str, format: str = "mp3") -> str:
+def convert_audio(audio_path: str, output_path: str) -> str:
     """Convert audio to specified format."""
     cmd = ["ffmpeg", "-y", "-i", audio_path, output_path]
     result = subprocess.run(cmd, capture_output=True, text=True)
