@@ -1,0 +1,88 @@
+# =========================
+
+# Python / FastAPI
+
+# =========================
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.env
+venv/
+.venv/
+env/
+*.db
+*.sqlite3
+
+# database migrations cache
+
+alembic/versions/**pycache**/
+
+# =========================
+
+# Whisper / AI Models
+
+# =========================
+
+models/
+*.pt
+*.bin
+*.onnx
+
+# =========================
+
+# Downloads & Outputs
+
+# =========================
+
+downloads/
+outputs/
+temp/
+*.wav
+*.mp3
+*.mp4
+*.mkv
+*.srt
+
+# =========================
+
+# Node / React / Vite
+
+# =========================
+
+node_modules/
+dist/
+build/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+
+# IDE / Editor
+
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+
+# OS Files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# FFmpeg cache
+
+# =========================
+
+ffmpeg/
+cache/

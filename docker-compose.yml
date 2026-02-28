@@ -1,0 +1,65 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: ut_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: universal_translator
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: ut_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  libretranslate:
+    image: libretranslate/libretranslate:latest
+    container_name: ut_libretranslate
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      LT_LOAD_ONLY: "en,ar,zh,fr,de,hi,id,it,ja,ko,ms,nl,pl,pt,ru,es,sv,tr,uk,ur"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ut_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/universal_translator
+      REDIS_URL: redis://redis:6379/0
+      LIBRETRANSLATE_URL: http://libretranslate:5000
+      DATA_DIR: /app/data
+    volumes:
+      - ./backend/data:/app/data
+    depends_on:
+      - postgres
+      - redis
+      - libretranslate
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ut_frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
