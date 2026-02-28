@@ -1,5 +1,4 @@
 from faster_whisper import WhisperModel
-import os
 
 # Use "base" model for fast results; can be upgraded to "medium" or "large-v3"
 _model = None
