@@ -14,14 +14,10 @@ const PLATFORMS = [
 
 const FEATURES = [
     {
-        icon: <Zap size={24} className="text-yellow-400" />,
-        title: 'Lightning Fast',
-        desc: 'AI-powered pipeline processes content in minutes, not hours'
+        icon: <Zap size={24} className="text-yellow-400" />,        title: 'Lightning Fast',        desc: 'AI-powered pipeline processes content in minutes, not hours'
     },
     {
-        icon: <Languages size={24} className="text-purple-400" />,
-        title: '20 Languages',
-        desc: 'From Arabic to Ukrainian — translate into any major language'
+        icon: <Languages size={24} className="text-purple-400" />,        title: '20 Languages',        desc: 'From Arabic to Ukrainian — translate into any major language'
     },
     {
         icon: <Mic size={24} className="text-blue-400" />,

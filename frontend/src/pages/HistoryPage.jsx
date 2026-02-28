@@ -3,9 +3,9 @@ import { Clock, CheckCircle, XCircle, Loader, Download, Globe } from 'lucide-rea
 import { listJobs, downloadOutput } from '../services/api'
 
 const STATUS_ICONS = {
-    COMPLETED: <CheckCircle size={16} className="text-green-400" />,
-    FAILED: <XCircle size={16} className="text-red-400" />,
-    PENDING: <Loader size={16} className="text-yellow-400 animate-spin" />,
+    COMPLETED: <CheckCircle size={16} className="text-green-400" />,  
+    FAILED: <XCircle size={16} className="text-red-400" />,  
+    PENDING: <Loader size={16} className="text-yellow-400 animate-spin" />,  
 }
 
 const STATUS_COLORS = {
@@ -19,7 +19,7 @@ const STATUS_COLORS = {
     MERGING: 'text-orange-400 bg-orange-400/10',
 }
 
-export default function HistoryPage() {
+const HistoryPage = () => {
     const [jobs, setJobs] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
