@@ -1,7 +1,6 @@
-from sqlalchemy import create_engine, Column, String, Integer, Float, Text, DateTime, Enum
+from sqlalchemy import create_engine, Column, String, Integer, Text, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime
 import uuid
 import enum

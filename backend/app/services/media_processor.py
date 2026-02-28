@@ -1,5 +1,4 @@
 import subprocess
-import os
 
 
 def extract_audio(video_path: str) -> str:
