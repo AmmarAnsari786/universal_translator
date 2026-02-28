@@ -26,6 +26,9 @@ const FALLBACK_LANGUAGES = [
     { code: 'ur', name: '🇵🇰 Urdu' },
 ]
 
+const TranslatorPage = () => {
+]
+
 const STATUS_STEPS = ['PENDING', 'DOWNLOADING', 'TRANSCRIBING', 'TRANSLATING', 'SYNTHESIZING', 'MERGING', 'COMPLETED']
 
 function StatusBar({ status, progress }) {
