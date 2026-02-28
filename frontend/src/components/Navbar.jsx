@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Globe, History, Zap } from 'lucide-react'
 
-export default function Navbar() {
+const Navbar = () => {
     const location = useLocation()
 
     const links = [

@@ -4,7 +4,7 @@ import LandingPage from './pages/LandingPage'
 import TranslatorPage from './pages/TranslatorPage'
 import HistoryPage from './pages/HistoryPage'
 
-export default function App() {
+const App = () => {
     return (
         <div className="min-h-screen bg-animated">
             <Navbar />
@@ -16,3 +16,5 @@ export default function App() {
         </div>
     )
 }
+
+export default App
