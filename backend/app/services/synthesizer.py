@@ -1,6 +1,5 @@
 import asyncio
 import edge_tts
-import os
 
 
 # Edge TTS voice map by language code

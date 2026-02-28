@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from app.models.database import get_db, TranslationJob, JobStatus
 from app.schemas.job import JobCreate, JobResponse
 from app.worker import run_translation_pipeline
-from app.config import settings, SUPPORTED_LANGUAGES
+from app.config import SUPPORTED_LANGUAGES
 
 router = APIRouter(prefix="/api/v1", tags=["jobs"])
 
