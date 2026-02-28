@@ -69,7 +69,7 @@
 ### Option 1: Windows (One-Click)
 
 ```bash
-git clone https://github.com/AmmarAnsari786/universal_translator.git
+git clone https://github.com/USERNAME/universal_translator.git
 cd universal_translator
 
 # Make sure PostgreSQL is running on port 5432
@@ -80,7 +80,7 @@ start_servers.bat
 ### Option 2: Docker Compose (Recommended)
 
 ```bash
-git clone https://github.com/AmmarAnsari786/universal_translator.git
+git clone https://github.com/USERNAME/universal_translator.git
 cd universal_translator
 docker-compose up --build
 ```
