@@ -1,8 +1,10 @@
 <div align="center">
 
+<div align="center">
+
 # 🌐 Universal Video & Audio Translator
 
-**AI-powered dubbing tool — translate any video or audio into 20 languages automatically**
+**AI-powered dubbing tool — translate any video or audio into 20+ languages automatically**
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react)](https://react.dev/)
@@ -11,7 +13,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=flat&logo=docker)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-[**Live Demo**](#) · [**API Docs**](http://localhost:8000/docs) · [**Report Bug**](issues)
+[**Live Demo**](#) · **API Docs:** available at `/docs` after starting backend · [**Report Bug**](issues)
 
 </div>
 
@@ -21,11 +23,13 @@
 
 - 🎬 **Download** from YouTube, TikTok, Spotify, Vimeo, SoundCloud, Instagram, Facebook, and 1000+ platforms via `yt-dlp`
 - 🎤 **Transcribe** audio locally with `faster-whisper` (Whisper AI — no cloud needed)
-- 🌍 **Translate** into **20 languages** via LibreTranslate
+- 🌍 **Translate** into **20+ languages** via LibreTranslate
 - 🔊 **Re-dub** with natural voices using Microsoft Edge TTS
 - 🎞️ **Merge** new audio into original video with FFmpeg
 - ⚡ **Real-time progress** tracking in the browser
 - 📥 **Download** the final dubbed video or audio
+
+---
 
 ## 🌐 Supported Languages
 
@@ -42,6 +46,8 @@
 | `nl` | Dutch | `ur` | Urdu |
 | `pl` | Polish | `sv` | Swedish |
 
+---
+
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
@@ -54,27 +60,28 @@
 | **Text-to-Speech** | Microsoft Edge TTS |
 | **Audio/Video** | FFmpeg |
 | **Database** | PostgreSQL |
-| **Cache/Queue** | Redis |
+| **Cache/Queue** | Redis (optional, future Celery support) |
+
+---
 
 ## 🚀 Quick Start
 
 ### Option 1: Windows (One-Click)
 
 ```bash
-# 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/universal-translater.git
-cd universal-translater
+git clone https://github.com/AmmarAnsari786/universal_translator.git
+cd universal_translator
 
-# 2. Make sure PostgreSQL is running on port 5432
-# 3. Double-click start_servers.bat or run:
+# Make sure PostgreSQL is running on port 5432
+# Double-click start_servers.bat
 start_servers.bat
 ```
 
 ### Option 2: Docker Compose (Recommended)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/universal-translater.git
-cd universal-translater
+git clone https://github.com/AmmarAnsari786/universal_translator.git
+cd universal_translator
 docker-compose up --build
 ```
 
